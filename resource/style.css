@@ -117,6 +117,7 @@ footer { text-align: center; padding: 3rem; color: var(--text-muted); font-size:
     width: 45px;
     height: 45px;
     min-width: 45px; /* 크기 고정 */
+    flex-shrink: 0; /* 크기 고정 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,4 +154,57 @@ footer { text-align: center; padding: 3rem; color: var(--text-muted); font-size:
 .link-card-item .btn-blog {
     margin-left: auto; /* 버튼을 항상 오른쪽 끝에 배치 */
     white-space: nowrap;
+}
+
+/* 📱 모바일 미디어 쿼리 (768px 이하) */
+@media (max-width: 768px) { 
+   nav {display:block ; text-align: center;}
+   nav .logo { line-height: 1.05rem; margin-bottom: 15px;}
+   nav .logo>a { display: block;}
+   nav ul { justify-content: space-around;}
+   .hero {padding: 4rem 10% 2rem}
+   .hero h1{font-size: 1.6rem ;}
+  .section-title { text-align: center;}
+  .link-card-item {
+    align-items: flex-start;
+    flex-wrap: wrap;           /* 자식 요소들이 넘치면 줄바꿈 */
+    justify-content:space-between;
+    gap: 5px;
+  }
+
+  .card-info {
+    display: block;
+    width: calc(100% - 65px);
+    flex-shrink: 0; /* 크기 고정 */
+    flex-grow: 0;
+  }
+
+  .link-card-item a {
+    margin-left: 65px !important;
+    margin-right: auto;
+    
+  }
+}
+
+/* 📱 모바일 미디어 쿼리 (480px 이하) */
+@media (max-width: 480px) { 
+  .link-card-item {
+    text-align: center;
+    display: block;
+  }
+
+  .card-icon {
+    margin: 0 auto 10px;
+  }
+
+  .card-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .link-card-item a {
+    display: inline-block;
+    margin-left: auto !important;
+    margin-top: 5px;
+  }
 }
