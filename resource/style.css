@@ -1,0 +1,82 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+    --primary: #4f46e5;
+    --bg: #f9fafb;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --text: #111827;
+    --text-muted: #6b7280;
+    --completed: #10b981;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Pretendard', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+nav { padding: 1.2rem 10%; display: flex; justify-content: space-between; background: white; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+nav ul { display: flex; list-style: none; gap: 1.5rem; }
+nav a { text-decoration: none; color: var(--text-muted); font-weight: 500; }
+
+.hero { padding: 4rem 10%; text-align: center; background: white; margin-bottom: 2rem; }
+.hero h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+.status-badge { display: inline-block; padding: 0.4rem 1rem; background: #eef2ff; color: var(--primary); border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+
+main { max-width: 800px; margin: 0 auto; padding: 0 5% 5rem; }
+.section-title { margin-bottom: 2rem; font-size: 1.5rem; }
+
+/* Timeline */
+.timeline { position: relative; border-left: 2px solid var(--border); padding-left: 2rem; margin-left: 1rem; }
+.step { position: relative; margin-bottom: 3.5rem; }
+.step-icon { position: absolute; left: -2.7rem; width: 22px; height: 22px; background: white; border: 2px solid var(--border); border-radius: 50%; font-size: 0.7rem; display: flex; align-items: center; justify-content: center; }
+
+.step.completed .step-icon { border-color: var(--completed); color: var(--completed); }
+.step.in-progress .step-icon { border-color: var(--primary); animation: pulse 2s infinite; }
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4); }
+    70% { box-shadow: 0 0 0 8px rgba(79, 70, 229, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0); }
+}
+
+/* Card & Content */
+.step-content { background: var(--card); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+.step-content h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.step-content p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.2rem; }
+
+/* 핵심: Link Group Styling */
+.links-group {
+    list-style: none;
+    border-top: 1px dashed var(--border);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+/* .link-item 대신 자식 li 선택 */
+.links-group > li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.link-label { font-size: 0.8rem; font-weight: 700; color: #9ca3af; min-width: 45px; }
+
+/* Buttons */
+.btn-repo, .btn-blog {
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.btn-repo { background: #f3f4f6; color: #374151; }
+.btn-repo:hover { background: #e5e7eb; color: var(--primary); }
+
+.btn-blog { background: #fff1f2; color: #e11d48; border: 1px solid #fecdd3; }
+.btn-blog:hover { background: #fecdd3; }
+
+footer { text-align: center; padding: 3rem; color: var(--text-muted); font-size: 0.85rem; }
