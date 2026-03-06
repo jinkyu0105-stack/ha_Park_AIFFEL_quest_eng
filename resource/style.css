@@ -131,17 +131,18 @@ footer { text-align: center; padding: 3rem; color: var(--text-muted); font-size:
 }
 
 .card-info h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 0;
-    min-width: 140px; /* 제목 너비를 일정하게 유지 */
+    min-width: 100px; /* 제목 너비를 일정하게 유지 */
     color: var(--text);
 }
 
 .card-info p {
     font-size: 0.9rem;
     color: var(--text-muted);
+    line-height: 1.2rem;
     margin: 0;
-    white-space: nowrap; /* 텍스트가 한 줄로 나오게 함 */
+    word-break: keep-all;
     overflow: hidden;
     text-overflow: ellipsis; /* 너무 길면 말줄임표 처리 */
 }
