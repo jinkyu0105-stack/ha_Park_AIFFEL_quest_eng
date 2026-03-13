@@ -1,7 +1,10 @@
+# 코랩파일 LINK
+- VR03: https://colab.research.google.com/drive/1YaIgLWlyv3TCpW94Ib4hkUJxpgY6ewov?usp=sharing
+- VR03: https://colab.research.google.com/drive/10nx_-WLWvdy_nYt1flav218w6fnoGpfB?usp=sharing
+
 # AIFFEL Campus Online Code Peer Review Templete
 - 코더 : 코더의 이름을 작성하세요.
 - 리뷰어 : 리뷰어의 이름을 작성하세요.  
- https://colab.research.google.com/drive/1YaIgLWlyv3TCpW94Ib4hkUJxpgY6ewov?usp=sharing
 
 # PRT(Peer Review Template)
 - [ ]  **1. 주어진 문제를 해결하는 완성된 코드가 제출되었나요?**
